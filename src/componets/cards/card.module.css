@@ -1,0 +1,55 @@
+@value makerBlack,makerWhite from '../../common/color.css';
+
+.card {
+  display: flex;
+  margin-bottom: 1em;
+  box-shadow: 14px 11px 13px 1px rgba(0, 0, 0, 0.36);
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  align-items: center;
+  max-width: 30em;
+  width: 100%;
+}
+.card.light {
+  background-color: makerWhite;
+  color: makerBlack;
+}
+.card.dark {
+  background-color: makerBlack;
+  color: makerWhite;
+}
+
+.avatar {
+  width: 10em;
+  height: 10em;
+  padding: 1em;
+  margin-right: 2em;
+  border-radius: 50%;
+}
+
+.name,
+.company,
+.job,
+.email,
+.message {
+  font-size: 1em;
+  margin: 0;
+}
+.name {
+  font-size: 1.2em;
+}
+.company {
+  margin-bottom: 0.8em;
+}
+.company::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 90%;
+  background-color: wheat;
+  transform: translateY(0.5em);
+}
+
+.info {
+  width: 100%;
+}

@@ -1,3 +1,5 @@
+@value mediaQuery from '../../common/size.css';
+
 .section {
   width: 80vw;
   height: 100vh;
@@ -7,5 +9,14 @@
 }
 
 .maker {
+  width: 100%;
   flex: 1 1 100%;
+
+  display: flex;
+}
+
+@media screen and (max-width: mediaQuery) {
+  .maker {
+    flex-direction: column;
+  }
 }

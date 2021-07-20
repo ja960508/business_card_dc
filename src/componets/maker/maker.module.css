@@ -1,0 +1,11 @@
+.section {
+  width: 80vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.maker {
+  flex: 1 1 100%;
+}

@@ -1,11 +1,22 @@
-import firebase from './firebase.js';
+import firebaseApp from './firebase';
+import firebase from 'firebase';
 
-class OauthService {
+class AuthService {
   login(providerName) {
     const authProvider = new firebase.auth[`${providerName}AuthProvider`]();
 
-    return firebase.auth().signInWithPopup(authProvider);
+    return firebaseApp.auth().signInWithPopup(authProvider);
+  }
+
+  logout() {
+    firebaseApp.auth().signOut();
+  }
+
+  onAuthChange(onUserChanged) {
+    firebaseApp.auth().onAuthStateChanged((user) => {
+      onUserChanged(user);
+    });
   }
 }
 
-export default OauthService;
+export default AuthService;
